@@ -1,0 +1,30 @@
+To yushan新队员：
+	安装之前请先换源(如何换源自行网上查找，算是入门第一步)
+	然后执行./install.sh命令(无法执行大概率是权限问题，查找相关权限修改命令学习学习 doge)
+	如何检查安装是否成功：
+	在命令行分别输入rcssserver,soccerwindow2,rcsslogplayer,fedit2,rcssmonitor命令
+	哪一条命令没有成功则是该命令对应软件未安装成功
+	都没有可能是bison或者前面的某些库没安装成功
+	如果除rcssserver外无法安装成功，那么大概率则是librcsc出现问题
+	安装脚本出现问题可以选择手动安装排错，步骤如下：
+	打开install.sh文件，如soccerwindow2命令无法执行
+	找到soccerwindow2的安装脚本部分：
+	tar -zxvf soccerwindow2.tar.gz
+	cd soccerwindow2
+	./bootstrap
+	./configure
+	make -j4
+	sudo make install
+	按顺序输入命令，根据命令的报错信息进行排错，尽量尝试自行解决，实在无法解决请教学长学姐哦
+
+	最后祝所有新队员在团队内都能有所收获！
+
+
+To 更新环境的队员:
+	更新server后需要删除如下文件：
+	- ~/.rcssserver/server.conf
+	- ~/.rcssserver/player.conf
+	- ~/.rcssserver/CSVSaver.conf
+	
+	
+
